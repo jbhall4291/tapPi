@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapPi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #aaaaaa;
+        }
+
+        h1,
+        h2 {
+            color: white;
+            text-align: center
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin-top: auto;
+            padding-bottom: 0.5rem;
+            font-size: 0.8rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            border-radius: 20px;
+            height: 160px;
+            border: none;
+            background-color: white;
+            color: #2c2c2c;
+            padding: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            font-size: 1.6rem;
+        }
+
+        #btn-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .nuts-btn {
+            background: linear-gradient(90deg, rgba(92, 58, 180, 1) 0%, rgba(253, 29, 54, 1) 100%);
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>TapPi</h1>
+    <div id="btn-container">
+        <button id="singleTap">Single Tap</button>
+        <button id="doubleTap">Double Tap</button>
+        <button id="tripleTap">Triple Tap</button>
+        <button id="fiveTap" class="nuts-btn">Go Nuts!</button>
+    </div>
+
+    <h2>
+        Built with 🍕 by Daisy & Johnny
+    </h2>
+
+    <!-- renders out current state of solenoid, handy for debug
+        <div class="status" id="status">Current State: OFF</div>
+    -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const statusElement = document.getElementById("status");
+
+            const setupTapButton = (id, tapCount) => {
+                const button = document.getElementById(id);
+                if (button) {
+                    button.addEventListener("click", () => {
+                        fetch(`/solenoid/tap/${tapCount}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(`Server responded with ${response.status}`);
+                                }
+                                if (statusElement) {
+                                    statusElement.textContent = `Current State: Tapping (${tapCount})`;
+                                }
+                            })
+                            .catch(err => {
+                                if (statusElement) {
+                                    statusElement.textContent = `Error: ${err.message}`;
+                                } else {
+                                    console.error(`Tap (${tapCount}) failed:`, err);
+                                }
+                            });
+                    });
+                }
+            };
+
+            setupTapButton("singleTap", 1);
+            setupTapButton("doubleTap", 2);
+            setupTapButton("tripleTap", 3);
+            setupTapButton("fiveTap", 5);
+        });
+
+    </script>
+</body>
+
+</html>
