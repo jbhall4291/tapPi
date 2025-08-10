@@ -31,6 +31,12 @@ The app runs a Flask web server with the following endpoints:
 
 Buttons on the frontend send requests to the server, which triggers the solenoid using the Raspberry Pi's GPIO pins.
 
+## 🔌 Wiring Diagram
+
+
+![Wiring diagram for Tappi Raspberry Pi solenoid relay setup](https://raw.githubusercontent.com/jbhall4291/tapPi/refs/heads/main/wiring_diagrams/Tappi_wiring_diagram.png)
+
+
 ## 🛠️ Setup & Usage
 
 > ⚠️ **Note:** You’ll need to run the app with `sudo` to allow access to GPIO pins.
