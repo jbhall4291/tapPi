@@ -1,6 +1,12 @@
 # 🛠️ TapPi 
 
-**TapPi** is a Raspberry Pi–powered web interface for controlling a solenoid to perform a series of mechanical "taps".
+**TapPi** is a Raspberry Pi–powered web interface that controls a solenoid to perform satisfying mechanical “taps”.
+
+
+[![Demo](/demo/tappi_demo_small.gif)](https://youtu.be/zqcNg0sHBC4)
+
+### [Click the GIF to **hear it in action** on YouTube 🔊](https://youtu.be/zqcNg0sHBC4)
+
 
 It was built as a collaborative project with my niece **Daisy** during her work experience week - partly for fun, partly for her to teach me some Python! Together we explored hardware control, threading, and building a playful user interface that turns code into physical action.
 
@@ -63,8 +69,18 @@ Buttons on the frontend send requests to the server, which triggers the solenoid
       Press one of the buttons to trigger the solenoid in rapid, satisfying bursts.
 
 
-## 📸 Demo
-Coming soon!
+
+
+
+
+## 🎥 Demo Video (with sound!)
+
+Click the thumbnail to watch (sound on 🔊).
+
+[![Watch the Tapper in action](https://img.youtube.com/vi/zqcNg0sHBC4/0.jpg)](https://youtu.be/zqcNg0sHBC4)
+
+
+<img src="demo/tappi_screenshot.png" width="300">
 
 ## 🤝 Credits
 Made with my niece Daisy as a fun and chaotic work experience project. She taught me some Python, and together we learned how to use it to control real-world hardware - outside of my usual remit as a web developer!
