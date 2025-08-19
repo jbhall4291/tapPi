@@ -73,14 +73,15 @@ Buttons on the frontend send requests to the server, which triggers the solenoid
 
 
 
-## 🎥 Demo Video (with sound!)
-
-Click the thumbnail to watch (sound on 🔊).
-
-[![Watch the Tapper in action](https://img.youtube.com/vi/zqcNg0sHBC4/0.jpg)](https://youtu.be/zqcNg0sHBC4)
+## 📺 Full Demo Video (with sound!)
+For the full experience (including the satisfying tap sounds), watch on YouTube:
 
 
-<img src="demo/tappi_screenshot.png" width="300">
+| [Demo Video (YouTube 🔊)](https://youtu.be/zqcNg0sHBC4) | Screenshot |
+|--------------------------|----------------|
+| [![Watch the Tapper in action](https://img.youtube.com/vi/zqcNg0sHBC4/0.jpg)](https://youtu.be/zqcNg0sHBC4) | <img src="demo/tappi_screenshot.png" width="300"> |
+
+
 
 ## 🤝 Credits
 Made with my niece Daisy as a fun and chaotic work experience project. She taught me some Python, and together we learned how to use it to control real-world hardware - outside of my usual remit as a web developer!
