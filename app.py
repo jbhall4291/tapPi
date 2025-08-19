@@ -6,7 +6,7 @@ import threading
 app = Flask(__name__)
 
 GPIO.setmode(GPIO.BCM)
-solenoid_pin = 18
+solenoid_pin = 15
 GPIO.setup(solenoid_pin, GPIO.OUT)
 GPIO.output(solenoid_pin, GPIO.LOW)  # Keep solenoid OFF initially!
 
