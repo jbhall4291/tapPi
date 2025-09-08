@@ -5,7 +5,7 @@
 
 [![Demo](/demo/tappi_demo_small.gif)](https://youtu.be/zqcNg0sHBC4)
 
-### [Click the GIF to **hear it in action** on YouTube 🔊](https://youtu.be/zqcNg0sHBC4)
+### [Click the GIF to **hear TapPi in action** on YouTube 🔊](https://youtu.be/zqcNg0sHBC4)
 
 
 It was built as a collaborative project with my niece **Daisy** during her work experience week - partly for fun, partly for her to teach me some Python! Together we explored hardware control, threading, and building a playful user interface that turns code into physical action.
